@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script src="js/vue.js"></script>
+		
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="element-ui/theme-chalk/index.css">
+		
+		<!-- 引入组件库 -->
+		<script src="element-ui/index.js"></script>
+
+	</head>
+	
+	<body>
+		
+		
+		<div id="app">
+			
+			<template>
+			  <el-input-number v-model="num" v-on:change="handleChange" v-bind:min="1" v-bind:max="5" label="描述文字"></el-input-number>
+			</template>
+			 
+			
+			 
+		</div>
+		
+	</body>
+	
+	<script>
+
+		var app = new Vue({
+		  el: '#app',
+		  data: {
+		    message: 'Hello Vue! '  ,
+			num : 1 ,
+		  },
+		  methods : {
+			  handleChange : function(value){
+				  console.log('new value:' + value);
+			  }
+		  }
+		})
+		
+		
+		
+	</script>
+</html>

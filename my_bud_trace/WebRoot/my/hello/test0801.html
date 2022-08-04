@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<script src="../../js/vue.js"></script>
+		
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="../../element-ui/theme-chalk/index.css">
+		
+		<!-- 引入组件库 -->
+		<script src="../../element-ui/index.js"></script>
+
+	</head>
+	
+	<body>
+		
+		
+		<div id="app">
+			  <el-button :text="message">默认按钮</el-button>
+			  <el-button @click="act" type="primary" >主要按钮</el-button>
+			  <el-button type="success">成功按钮</el-button>
+			  <el-button type="info">信息按钮</el-button>
+			  <el-button type="warning">警告按钮</el-button>
+			  <el-button type="danger">危险按钮</el-button>
+			  <label>{{message}}</label>
+			  <input :value="message">点击</input>
+			  <span v-text="message"></span>
+		</div>
+		
+	</body>
+	
+	<script>
+
+		var app = new Vue({
+		  el: '#app',
+		  data: {
+		    message: 'Hello Vue! '  ,
+		  },
+		  methods:{
+			act : function(){
+				this.message = 'you click!!';
+			}  
+			  
+		  }
+		})
+		
+		
+		
+	</script>
+</html>

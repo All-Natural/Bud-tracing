@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>花蕾寻迹 & 基于儿童行为轨迹的状态分析及预警系统| 消息</title>
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/slicknav.css">
+		<link rel="stylesheet" href="assets/css/lightslider.min.css">
+		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="assets/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/nice-select.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<script src="js/vue.js"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="element-ui/theme-chalk/index.css">
+
+		<!-- 引入组件库 -->
+		<script src="element-ui/index.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/proj.js"></script>
+		<style>
+			.el-header {
+				background-color: #B3C0D1;
+				color: #333;
+				line-height: 60px;
+			}
+
+			.el-aside {
+				color: #333;
+			}
+
+			.list_col {
+				text-align: center;
+			}
+
+			.list_head {
+				/* border-bottom: 2px solid #ddd; */
+				padding: 5px 8px 18px 8px;
+				color: #416aca;
+				font-size: 15px;
+			}
+
+			.list_item {
+				/* border-bottom: 1px solid #ddd; */
+				padding: 18px 8px 18px 8px;
+				color: #6aa4ca;
+				cursor: pointer;
+				height: 70px;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+			}
+		</style>
+
+
+
+	</head>
+
+	<body>
+		<header>
+			<div class="header-area">
+				<div class="main-header ">
+					<div class="header-top ">
+						<div class="container">
+							<div class="row">
+								<div class="col-xl-12">
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="header-info-left ">
+											<!-- Social -->
+											<div class="header-social d-none d-sm-block">
+												<a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+												<a href="#"><i class="fab fa-instagram"></i></a>
+												<a href="#"><i class="fab fa-twitter"></i></a>
+												<a href="#"><i class="fab fa-linkedin-in"></i></a>
+												<a href="#"><i class="fab fa-tumblr"></i></a>
+											</div>
+										</div>
+										<div class="header-info-mid">
+											<!-- logo -->
+											<div class="logo">
+												<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+											</div>
+										</div>
+										<div class="header-info-right d-flex align-items-center">
+											<ul>
+												<li>
+													<form class="search-form" action="#">
+														<i class="fas fa-search"></i>
+														<input type="search" class="form-control"
+															placeholder="Search Here" title="Search here">
+													</form>
+												</li>
+												<li><a href="index.html">首页</a>
+													<ul class="multipage">
+														<!-- <li><a href="about.html">关于我们</a></li> -->
+														<li><a href="about.html">团队使命</a></li>
+														<!-- <li><a href="category.html">最新资讯</a></li> -->
+														<li><a href="post_details.html">资讯详情</a></li>
+														<!-- <li><a href="blog_details.html">平台守护者</a></li> -->
+														<li><a href="blog_details.html">活动风采</a></li>
+														<li><a href="contact.html">联系我们</a></li>
+													</ul>
+												</li>
+												<li><a href="login.jsp" class="header-btn">登录</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header-bottom  header-sticky">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-xl-12">
+									<!-- logo 2 -->
+									<div class="logo2">
+										<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+									</div>
+									<!-- logo 3 -->
+									<div class="logo3 d-block d-sm-none">
+										<a href="index.html"><img src="assets/img/logo/logo-mobile.png" alt=""></a>
+									</div>
+									<!-- Main-menu -->
+									<div class="main-menu text-center d-none d-lg-block">
+										<nav>
+											<ul id="navigation">
+												<li><a href="index.html">首 页</a></li>
+												<li> </li>
+												<li><a href="show_dev.htm">设 备 列 表</a></li>
+												<li> </li>
+												<li><a href="show_com_post_list.htm">花 蕾 社 区</a></li>
+												<li> </li>
+												<li><a href="message_list.html">消 息</a></li>
+												<li> </li>
+												<li><a href="mycenter.jsp">个 人 中 心</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+								<!-- Mobile Menu -->
+								<div class="col-xl-12">
+									<div class="mobile_menu d-block d-lg-none"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<div id="app">
+			<div>
+				<el-container style="height: 900px; border: 1px solid #eee ; ">
+					<el-aside width="15%" style="color: #007BFF;">
+						<el-menu :default-openeds="['1', '3']">
+							<el-submenu index="1">
+								<template slot="title"><i class="el-icon-message"></i><span
+										onclick="act.query_all()">全部消息</span></template>
+								<!-- <el-menu-item index="1-2" @click="query_by_type('2')">线索信息</el-menu-item> -->
+								<el-menu-item-group>
+									<!-- <template slot="title">预警信息</template> -->
+									<el-submenu index="1-1">
+										<template slot="title">审核消息</template>
+										<el-menu-item index="1-1-1" onclick="act.query_by(1, 0)">重要消息</el-menu-item>
+										<el-menu-item index="1-1-2" onclick="act.query_by(1, 1)">普通消息</el-menu-item>
+									</el-submenu>
+									<el-submenu index="1-2">
+										<template slot="title">线索信息</template>
+										<el-menu-item index="1-2-1" onclick="act.query_by(2, 1)">重要消息</el-menu-item>
+										<el-menu-item index="1-2-2" onclick="act.query_by(2, 0)">普通消息</el-menu-item>
+									</el-submenu>
+									<el-submenu index="1-3">
+										<template slot="title">电子围栏</template>
+										<el-menu-item index="1-3-1" onclick="act.query_by(3, 1)">重要消息</el-menu-item>
+										<el-menu-item index="1-3-2" onclick="act.query_by(3, 0)">普通消息</el-menu-item>
+									</el-submenu>
+									<el-submenu index="1-4">
+										<template slot="title">速度预警</template>
+										<el-menu-item index="1-4-1" onclick="act.query_by(4, 0)">重要消息</el-menu-item>
+										<el-menu-item index="1-4-2" onclick="act.query_by(4, 1)">普通消息</el-menu-item>
+									</el-submenu>
+								</el-menu-item-group>
+
+						</el-menu>
+					</el-aside>
+
+					<el-container>
+
+						<el-header
+							style="text-align: right; font-size: 12px; width: 82%; background-color: #bae0fd; vertical-align: middle;">
+							<el-row :align="middle" class="list_col list_head" style="color: white;">
+								<el-col :span="4">
+									日期
+								</el-col>
+								<el-col :span="3">
+									消息类型
+								</el-col>
+								<el-col :span="2">
+									提醒等级
+								</el-col :span="15">
+								消息摘要
+								</el-col>
+							</el-row>
+						</el-header>
+
+						<el-main style="width: 82%; height: auto;">
+
+
+							<!-- 内容区-->
+							<template v-for="item in dataList">
+								<div @click="detail(item.proid)"
+									style="display: inline-block; max-width: 80%; min-width: 70%;">
+									<el-row class="list_col list_item">
+										<el-col :span="4" @click="detail(item.proid)">
+											{{item.procreate}}
+										</el-col>
+										<el-col :span="3" @click="detail(item.proid)">
+											{{item.protype}}
+										</el-col>
+										<el-col :span="2" @click="detail(item.proid)">
+											{{item.prograde}}
+										</el-col>
+										<el-col :span="13" @click="detail(item.proid)">
+											<span>{{item.prodigest + '...'}}</span>
+										</el-col>
+										<a v-on:click="go"></a>
+
+										<el-col :span="2">
+
+										</el-col>
+									</el-row>
+								</div>
+								<el-button type="primary" icon="el-icon-delete"
+									style="color: #8bb3fd; background-color: #bae0fd; " @click="del_by(item.proid)"
+									circle></el-button>
+								<!-- <el-button type="primary" :uid='item.proid' style="color: #8bb3fd; background-color: #bae0fd; text-align: center; vertical-align: middle; " icon="el-icon-delete" @click="del_by(item.proid)"></el-button> -->
+							</template>
+						</el-main>
+
+					</el-container>
+				</el-container>
+			</div>
+		</div>
+
+		<!--
+		尾部html
+		-->
+
+		<footer>
+			<div class="footer-area footer-padding">
+				<div class="container">
+					<div class="row d-flex justify-content-between">
+						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="single-footer-caption mb-30">
+									<!-- logo -->
+									<div class="footer-logo mb-25">
+										<a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+									</div>
+									<div class="footer-tittle">
+										<div class="footer-pera">
+											<p align="left">
+												花蕾寻迹从行之有效的角度全面改善现今社会少年儿童的安全隐患问题，为全国每一个孩子提供最为完善的安全防护系统服务，发动社会全员参与其中。</p>
+										</div>
+									</div>
+									<div class="footer-social">
+										<a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+										<a href="#"><i class="fab fa-instagram"></i></a>
+										<a href="#"><i class="fab fa-twitter"></i></a>
+										<a href="#"><i class="fab fa-linkedin-in"></i></a>
+										<a href="#"><i class="fab fa-tumblr"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle">
+									<h4>相关链接</h4>
+									<ul>
+										<li><a href="about.html">团队使命</a></li>
+										<!-- <li><a href="category.html">最新资讯</a></li> -->
+										<li><a href="post_details.html">资讯详情</a></li>
+										<!-- <li><a href="blog_details.html">平台守护者</a></li> -->
+										<li><a href="blog.html">活动风采</a></li>
+										<li><a href="contact.html">联系我们</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle">
+									<h4>菜单</h4>
+									<ul>
+										<li><a href="index.html">首页</a></li>
+										<li><a href="device_list.html"> 设备列表</a></li>
+										<li><a href="#">花蕾社区</a></li>
+										<li><a href="#">消息</a></li>
+										<li><a href="#">个人中心</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle mb-50">
+									<h4>联系我们</h4>
+									<p>加入我们、提供建议，为人间铸就出更多大善，大爱之人！</p>
+								</div>
+								<!-- Form -->
+								<div class="footer-form">
+									<div id="mc_embed_signup">
+										<form target="_blank"
+											action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+											method="get" class="subscribe_form relative mail_part" novalidate="true">
+											<input type="email" name="EMAIL" id="newsletter-form-email"
+												placeholder="  请输入你的邮箱">
+											<div class="form-icon">
+												<button type="submit" name="submit" id="newsletter-submit"
+													class="email_icon newsletter-submit button-contactForm">
+
+													提交
+												</button>
+											</div>
+											<div class="mt-10 info"></div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer-bottom area -->
+			<div class="footer-bottom-area">
+				<div class="container">
+					<div class="footer-border">
+						<div class="row d-flex align-items-center">
+							<div class="col-xl-12 ">
+								<div class="footer-copy-right text-center">
+									<p>版权 &copy;<script>
+											document.write(new Date().getFullYear());
+										</script> All rights reserved | Designed by 你说的队
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>
+		var arr = [];
+
+		// var data = {};
+		// data.time = '2021-10-09';
+		// data.type = '系统消息';
+		// data.grade = '重要';
+		// data.content = '尊敬的my 您好 您的孩童：to';
+
+		// arr.push(data);
+
+		// var data2 = {};
+		// data2.time = '2021-10-09';
+		// data2.type = '系统消息';
+		// data2.grade = '重要';
+		// data2.content = '尊敬的my 您好 您的file:///D:/Desktop/页面地图/页面地图/contact.html孩童：to';
+		// arr.push(data2);
+
+		var act = {};
+
+		act.query_all = function() {
+			var url = '/bud/prompt/list';
+			k.gest_rest(url, function(result) {
+				// alert(result);
+				if (result.data == null) return;
+				var dataArr = result.data;
+				arr.splice(0, arr.length); //清空数组
+				for (var index = 0; index < dataArr.length; index++) {
+					arr.push(dataArr[index]);
+				}
+			})
+		};
+
+		act.query_by = function(type, grade) {
+			var url = '/bud/prompt/list?type=' + type + '&grade=' + grade;
+			k.gest_rest(url, function(result) {
+				// alert(result);
+				var dataArr = result.data;
+				if (dataArr == null) return;
+				// arr = [];
+				arr.splice(0, arr.length); //清空数组
+				for (var index = 0; index < dataArr.length; index++) {
+					arr.push(dataArr[index]);
+				}
+			})
+		};
+
+		act.del_by = function(proid) {
+			var url = '/bud/prompt/delete';
+			var data = {};
+			data.proid = proid;
+			data.cmd = 'delete prompt';
+			k.rest(url, data, function(result) {
+				//
+				return result;
+			})
+		}
+
+		act.aler = function(result) {
+			if (result.errcode == 200) {
+				this.$message({
+					message: '删除成功',
+					type: 'success'
+				});
+			} else {
+				this.$message({
+					message: '删除失败' + result.errormsg,
+					type: 'warning'
+				});
+			}
+		}
+
+		act.query_all(); //查询一次
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue!22',
+				uname: 'tom',
+				time: '2021-2-3 08:09:22',
+				type: -1,
+				grade: -1,
+				content: '尊敬的my 您好 您的孩童：tom 于 2021-07-29 15:58:55 速度达到了5.0 m/s ',
+				dataList: arr
+			},
+			methods: {
+				go: function() {
+					location.href = "http://hatlate.cn/bbs";
+				},
+				aler: function(result) {
+					if (result.errcode == 200) {
+						this.$message({
+							message: '删除成功',
+							type: 'success'
+						});
+					} else {
+						this.$message({
+							message: '删除失败' + result.errormsg,
+							type: 'warning'
+						});
+					}
+				},
+				query_all: function() {
+					act.query_all();
+				},
+				query_by: function(type, grade) {
+					act.query_by(type, grade);
+				},
+				query_2_1: function() {
+					this.query_by(2, 1);
+				},
+				query_2_0: function() {
+					this.query_by(2, 0);
+				},
+				alert_success: function() {
+					this.$message({
+						message: '删除成功',
+						type: 'success',
+						duration: 1000,
+						onClose: function() {
+							location.reload()
+						},
+					});
+				},
+				alert_warning: function() {
+					this.$message({
+						message: '删除失败',
+						type: 'warning'
+					});
+				},
+				del_by: function(proid) {
+					var url = '/bud/prompt/delete';
+					var data = {};
+					data.proid = proid;
+					data.cmd = 'delete prompt';
+					k.rest(url, data, function(result) {
+						//
+						if (result.errcode == 200) {
+							app.alert_success();
+							// location.reload();
+							// location.reload();
+						} else {
+							app.alert_warning();
+						}
+					})
+				},
+				detail: function(proid) {
+					location.href = "/bud/message.html?proid=" + proid;
+				}
+			}
+		})
+
+		// var url = 'http://127.0.0.1:8080/bud/prompt/list';
+		// k.gest_rest(url, function(result){
+		// 	// alert(result);
+		// 	var dataArr = result.data;
+		// 	for(var index = 0; index < dataArr.length; index++)
+		// 	{
+		// 		arr.push(dataArr[index]);
+		// 	}
+		// })
+
+
+
+		// export default {
+		//   data() {
+		//     const item = {
+		//       date: '2016-05-02',
+		//       name: '王小虎',
+		//       address: '上海市普陀区金沙江路 1518 弄'
+		//     };
+		//     return {
+		//       tableData: Array(20).fill(item)
+		//     }
+		//   }
+		// };
+	</script>
+</html>

@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>花蕾寻迹 & 基于儿童行为轨迹的状态分析及预警系统| 地图页</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/slicknav.css">
+		<link rel="stylesheet" href="assets/css/lightslider.min.css">
+		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="assets/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/nice-select.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="css/Map.css">
+		<link rel="stylesheet" href="css/api.css/webapi.css">
+		<!--折线需要的api-->
+		<script src="https://webapi.amap.com/maps?v=1.4.15&key=2b41975c2c9b8ef65d1fccb49f301671&plugin=AMap.PolyEditor,AMap.CircleEditor,AMap.MouseTool"></script>
+		<!--基础功能api-->
+		<script src="js/api.js/demoutils.js"></script>
+		<!--jqry-->
+		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- 引入组件库 -->
+		<script src="js/api.js/index.js"></script>
+		<script src="js/api.js/moment.js"></script>
+		<script src="js/proj.js"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="element-ui/theme-chalk/index.css">
+		
+		<!-- 引入组件库 -->
+		<script src="element-ui/index.js"></script>
+
+		<style>
+			.page-notification {
+				margin-bottom: 0px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<div class="header-area">
+				<div class="main-header ">
+					<div class="header-bottom  header-sticky">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-xl-12">
+									<!-- logo 2 -->
+									<div class="logo2">
+										<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+									</div>
+									<!-- logo 3 -->
+									<div class="logo3 d-block d-sm-none">
+										<a href="index.html"><img src="assets/img/logo/logo-mobile.png" alt=""></a>
+									</div>
+									<!-- Main-menu -->
+									<div class="main-menu text-center d-none d-lg-block">
+										<nav>
+											<ul id="navigation">
+												<li><a href="index.html">首 页</a></li>
+												<li>     </li>
+												<li><a href="show_dev.htm">设 备 列 表</a></li>
+												<li>     </li>
+												<li><a href="show_com_post_list.htm">花 蕾 社 区</a></li>
+												<li>     </li>
+												<li><a href="message_list.html">消 息</a></li>
+												<li>     </li>
+												<li><a href="mycenter.jsp">个 人 中 心</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+								<!-- Mobile Menu -->
+								<div class="col-xl-12">
+									<div class="mobile_menu d-block d-lg-none"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<!-- breadcrumb Start-->
+			<div class="page-notification">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb justify-content-center">
+									<li class="breadcrumb-item"><a href="index.html">首页</a></li>
+									<li class="breadcrumb-item"><a href="show_dev.htm">设备列表</a></li>
+									<li class="breadcrumb-item"><a href="#">地图显示</a></li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- breadcrumb End -->
+			<!--?  Contact Area start  -->
+			<section class="contact-section">
+				<div id="bigcontainer" style="position: relative;">
+					<div id="leftcontainer">
+						<div class="pointime">
+							<div class="col-md-12 column" style="box-shadow: 0 0 16px 3px rgba(0, 0, 0, 0.1);">
+								<div class="alert alert-info"
+									v-html="'<h5>页面设备详情</h5><strong>设备ID：</strong>' + cuid + '<br><strong>孩童姓名：</strong>' + name">
+								</div>
+							</div>
+							<div class="col-md-12 column" style="box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);">
+								<div id="timecolor" style="transition: 1.25s;" class="alert alert-warning alert-success"
+									v-html="'<h5>最后定位运动速度：</h5><strong>' + speed + '</strong>'">
+								</div>
+							</div>
+							<div class="col-md-12 column" style="box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);">
+								<div id="timecolor1" style="transition: 1.25s;"
+									class="alert alert-warning alert-success"
+									v-html="'<h5>最后定位更新时间：</h5><strong>' + time + '</strong>'">
+								</div>
+							</div>
+							<div class="col-md-12 column" style="box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);">
+								<div id="resultcolor" class="alert alert-info"
+									v-html="'<h5>操作执行结果</h5><strong>' + result + '<strong'">
+
+								</div>
+							</div>
+						</div>
+						<div id="vuecircle" style="transition: 1.5s;">
+							<div class="vuebtn col-md-12 column"
+								style="box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1); padding-top: 10px; padding-bottom: 10px;">
+								<h4 style="font-size: 18px; font-weight: 500; text-align: center;">电子围栏快捷选择区</h4>
+								<button class="btnsd"
+									:class="{'safebtn': circltype[i]==1 , 'dangerbtn': circltype[i]==0}"
+									v-for="(item, i) in this.circleinform" @click="crclfind(i)"
+									v-html="(item.getExtData().type == 1 ? safe : danger) + item.getExtData().name" style="width: 95px;"></button>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div id="container" style="box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1); margin-right: 10px;"></div>
+					<div id="app1" style="position: absolute;top:508px;left:700px;">
+						<el-form :inline="true" :model="formInline" ref='ruleForm' class="demo-form-inline" :rules='rules' style="background-color: rgba(255, 255, 255, 0);">
+						  <el-form-item label="围栏名称" prop='thename'>
+							<el-input v-model="formInline.thename" style="width: 11em;" placeholder="给围栏定义一个名称"></el-input>
+						  </el-form-item>
+						  <el-form-item label="围栏描述" prop='thedesc'>
+							<el-input v-model="formInline.thedesc" style="width: 11em;" placeholder="加上一些详细信息"></el-input>
+						  </el-form-item>
+						  <el-form-item label="围栏类别" prop='thetype'>
+							<el-select v-model="formInline.thetype" style="width: 11em;" placeholder="安全 / 危险">
+							  <el-option label="安全" value="1"></el-option>
+							  <el-option label="危险" value="0"></el-option>
+							</el-select>
+						  </el-form-item>
+						  <el-form-item>
+							<el-button type="primary" @click='subMit'>上传</el-button>
+						  </el-form-item>
+						</el-form>
+						</div>
+				</div>
+				<div class="container">
+					<div id="app" style="z-index: 100; position: absolute; top: 590px; left: 240px">
+						<template>
+							<div class="block">
+								<!-- <el-button @click="clickevent">选定时间</el-button> -->
+								<el-date-picker title="此处可以选择轨迹或热力图的时间区间" class="timechoose" v-model="value1" type="datetimerange"
+									range-separator="至" start-placeholder="开始时间" end-placeholder="结束时间"
+									@change="clickevent">
+								</el-date-picker>
+							</div>
+						</template>
+					</div>
+					<div class="row clearfix" style="width: 1200px; margin-left: 20px; width: calc(100% - 290px);">
+						
+				</div>
+				
+			</section>
+			<div id="kapp" style="padding: 0px;">
+				
+				<div style="width: 180px;height:14.5px; display: block;"> </div>
+				<div style="width: calc(100% - 280px); display: inline-block;">
+					<div class="col-md-5 column" style=" margin-right: 10px; width: calc(50% - 10px); display: inline-block; box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); padding: 10px 0px 10px 0px;text-align: center">
+						<h3 style="font-weight: 300; text-align: center; border-bottom: outset; border-width: 1px; border-width: 0px;">
+							轨迹与定位
+						</h3>
+						<div class="btn-group btn-group-lg">
+							<el-row>
+								<el-button onclick="traceshow()" type="primary" plain>轨迹读取</el-button>
+								<el-button onclick="getdata()" type="primary" plain>轨迹热力图</el-button>
+								<el-button onclick="pointGet()" type="primary" plain>持续定位获取</el-button>
+								<el-button onclick="clearpoint()"type="primary" plain>关闭定位获取</el-button>
+								<!-- <el-button onclick="window.location.reload()"type="primary" plain>刷新页面</el-button> -->
+							</el-row>
+						</div>
+						
+					</div>
+					<div class="col-md-7 column" style=" display: inline-block;  width: calc(57%); box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); padding: 10px 0px 10px 0px;text-align: center">
+						<h3 style="font-weight: 300; text-align: center; border-bottom: outset; border-width: 0px;">
+							电子围栏
+						</h3>
+						<div class="btn-group">
+							<el-row>
+								<el-button onclick="polyshow()" type="primary" plain v-html="editext1"></el-button>
+								<el-button onclick="crclshow()" type="primary" plain v-html="editext"></el-button>
+								<el-button onclick="showform()" id='upinner' type="primary" plain>电子围栏上传</el-button>
+								<el-button onclick="showcircle()"type="primary" plain>显示电子围栏</el-button>
+								<el-button onclick="deletecircle()"type="primary" plain>删除选中围栏</el-button>
+							</el-row>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- Contact Area End -->
+		</main>
+		
+		 
+	</body>
+	<script src="js/Map.js"></script>
+	
+	<script>
+		var pointime = new Vue({
+		    el: ".pointime",
+		    data: {
+		        time: "未定位",
+		        speed: "未定位",
+		        cuid: getQueryVariable("cuid"),
+		        puid: getQueryVariable("puid"),
+		        name: decodeURI(getQueryVariable("name")),
+		        result: "尚未执行任何操作"
+		    }
+		    }
+		)
+	</script>
+	<script src="js/PointGet.js"></script>
+	<script src="js/MultiCircleEdit.js"></script>
+	<script src="js/ChooseDate.js"></script>
+	<script src="js/PolyLine.js"></script>
+	<script src="js/heatmap.js"></script>
+	<script src="js//Polygon.js"></script>
+	<script src="js/RightClickMenu.js"></script>
+	<script src="js/SingleCircleEdit.js"></script>
+	<script src="js/UploadForm.js"></script>
+	<script>
+	var kapp = new Vue({
+		el: "#kapp",
+		data:{
+			editext: "新增电子围栏",
+			editext1: "新增多边形围栏",
+		}	
+	})
+	</script>
+</html>

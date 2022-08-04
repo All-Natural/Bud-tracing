@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>花蕾寻迹 & 基于儿童行为轨迹的状态分析及预警系统| 消息</title>
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		<!-- CSS here -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/slicknav.css">
+		<link rel="stylesheet" href="assets/css/lightslider.min.css">
+		<link rel="stylesheet" href="assets/css/animate.min.css">
+		<link rel="stylesheet" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="assets/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/nice-select.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script src="js/vue.js"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="element-ui/theme-chalk/index.css">
+
+		<!-- 引入组件库 -->
+		<script src="element-ui/index.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/proj.js"></script>
+
+		<style>
+			.contain {
+				/* height: 700px; */
+				width: 77%;
+				background-color: #f4f5f7;
+				display: inline-block;
+				border-radius: 4px;
+				/* padding: 10px 10px 10px 10px; */
+			}
+
+			.protitle {
+				/* font-weight: bold; */
+				font-size: 18px;
+				background-color: white;
+				/* vertical-align: middle; */
+				border-radius: 4px;
+				height: 60px;
+				padding: 18px;
+			}
+
+			.prograde {
+				height: 20px;
+				/* padding: 10px; */
+				margin: 20px;
+			}
+
+			.prograde .impor {
+				background-color: #be2929;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+				color: #f4f5f7;
+			}
+
+			.prograde .not {
+				background-color: #41a863;
+				padding: 10px;
+				border-radius: 5px;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+				color: #f4f5f7;
+			}
+
+			.content {
+				font-size: 18px;
+				/* width: 700px; */
+				/* white-space: pre-wrap; */
+				white-space: pre;
+				white-space: -moz-pre-wrap;
+				white-space: -o-pre-wrap;
+				word-wrap: break-all;
+				letter-spacing: 2px;
+				background-color: #ffffff;
+				margin: 10px 40px 80px 40px;
+				padding-top: 20px;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+				border-radius: 6px;
+			}
+
+			;
+
+			.detailContent {
+				/* background: #F6F7FB; */
+				background-color: #ffffff;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+				border-radius: 6px;
+				/*word-spacing: 0.2em;*/
+				line-height: 200%;
+				display: block;
+				letter-spacing: 0.5px;
+				height: auto;
+				width: auto;
+				font-size: 17px;
+				/*white-space:pre;*/
+				word-break: normal;
+				display: block;
+				white-space: pre-wrap;
+				word-wrap: break-word;
+				overflow: hidden;
+
+				/* white-space: pre-wrap;
+				word-wrap: break-word; */
+
+				margin-left: 10px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+
+				padding: 12px 12px 12px 12px;
+
+				font-weight: 400;
+				/*font-weight: bolder;*/
+				font-family: "microsoft yahei";
+			}
+
+			.content2 {
+				background-color: #ffffff;
+				box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+				border-radius: 6px;
+				letter-spacing: 0.5px;
+				font-size: 17px;
+				/* margin-left: 10px;
+				margin-right: 10px;
+				margin-bottom: 10px; */
+				padding: 12px 12px 12px 12px;
+				color: #000000;
+			}
+		</style>
+
+	</head>
+
+
+	<body>
+		<header>
+			<div class="header-area">
+				<div class="main-header ">
+					<div class="header-top ">
+						<div class="container">
+							<div class="row">
+								<div class="col-xl-12">
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="header-info-left ">
+											<!-- Social -->
+											<div class="header-social d-none d-sm-block">
+												<a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+												<a href="#"><i class="fab fa-instagram"></i></a>
+												<a href="#"><i class="fab fa-twitter"></i></a>
+												<a href="#"><i class="fab fa-linkedin-in"></i></a>
+												<a href="#"><i class="fab fa-tumblr"></i></a>
+											</div>
+										</div>
+										<div class="header-info-mid">
+											<!-- logo -->
+											<div class="logo">
+												<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+											</div>
+										</div>
+										<div class="header-info-right d-flex align-items-center">
+											<ul>
+												<li>
+													<form class="search-form" action="#">
+														<i class="fas fa-search"></i>
+														<input type="search" class="form-control"
+															placeholder="Search Here" title="Search here">
+													</form>
+												</li>
+												<li><a href="index.html">首页</a>
+													<ul class="multipage">
+														<!-- <li><a href="about.html">关于我们</a></li> -->
+														<li><a href="about.html">团队使命</a></li>
+														<!-- <li><a href="category.html">最新资讯</a></li> -->
+														<li><a href="post_details.html">资讯详情</a></li>
+														<!-- <li><a href="blog_details.html">平台守护者</a></li> -->
+														<li><a href="blog_details.html">活动风采</a></li>
+														<li><a href="contact.html">联系我们</a></li>
+													</ul>
+												</li>
+												<li><a href="login.html" class="header-btn">登录</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header-bottom  header-sticky">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-xl-12">
+									<!-- logo 2 -->
+									<div class="logo2">
+										<a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+									</div>
+									<!-- logo 3 -->
+									<div class="logo3 d-block d-sm-none">
+										<a href="index.html"><img src="assets/img/logo/logo-mobile.png" alt=""></a>
+									</div>
+									<!-- Main-menu -->
+									<div class="main-menu text-center d-none d-lg-block">
+										<nav>
+											<ul id="navigation">
+												<li><a href="index.html">首 页</a></li>
+												<li><a href="device_list.html">设 备 列 表</a></li>
+												<li><a href="show_com_post_list.htm">花 蕾 社 区</a></li>
+												<li><a href="message_list.html">消 息</a></li>
+												<li><a href="mycenter.jsp">个 人 中 心</a></li>
+												<!--            <li><a href="category.html">Movie</a></li>
+		                   <li><a href="category.html">Fitness</a></li>
+		                   <li><a href="category.html">Fashion</a></li> -->
+											</ul>
+										</nav>
+									</div>
+								</div>
+								<!-- Mobile Menu -->
+								<div class="col-xl-12">
+									<div class="mobile_menu d-block d-lg-none"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="app" style="text-align: center;">
+			<div class="contain">
+				<el-row class="protitle" style="">
+					<!-- <el-button @click="click">click</el-button> -->
+					<span style="">
+						{{protype}}
+					</span>
+				</el-row>
+				<el-row class="prograde">
+					<el-col :span="6" style="">
+						<div>
+							<span v-if="prograde === '重要'" style="" class="impor">
+								{{prograde}}
+							</span>
+							<span v-if="prograde === '普通'" style="" class="not">
+								{{prograde}}
+							</span>
+						</div>
+					</el-col>
+
+				</el-row>
+				<el-row style="padding: 10px 40px 40px 40px;">
+					<el-input type="textarea" :rows="2" placeholder="请输入内容" v-model="procontent" readonly="true"
+						resize="none" class="content2" autosize="true">
+					</el-input>
+				</el-row>
+			</div>
+		</div>
+
+
+		<!--
+		尾部html
+		-->
+
+		<footer>
+			<div class="footer-area footer-padding">
+				<div class="container">
+					<div class="row d-flex justify-content-between">
+						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="single-footer-caption mb-30">
+									<!-- logo -->
+									<div class="footer-logo mb-25">
+										<a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+									</div>
+									<div class="footer-tittle">
+										<div class="footer-pera">
+											<p align="left">
+												花蕾寻迹从行之有效的角度全面改善现今社会少年儿童的安全隐患问题，为全国每一个孩子提供最为完善的安全防护系统服务，发动社会全员参与其中。</p>
+										</div>
+									</div>
+									<div class="footer-social">
+										<a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+										<a href="#"><i class="fab fa-instagram"></i></a>
+										<a href="#"><i class="fab fa-twitter"></i></a>
+										<a href="#"><i class="fab fa-linkedin-in"></i></a>
+										<a href="#"><i class="fab fa-tumblr"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle">
+									<h4>相关链接</h4>
+									<ul>
+										<li><a href="about.html">团队使命</a></li>
+										<!-- <li><a href="category.html">最新资讯</a></li> -->
+										<li><a href="post_details.html">资讯详情</a></li>
+										<!-- <li><a href="blog_details.html">平台守护者</a></li> -->
+										<li><a href="blog.html">活动风采</a></li>
+										<li><a href="contact.html">联系我们</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle">
+									<h4>菜单</h4>
+									<ul>
+										<li><a href="index.html">首页</a></li>
+										<li><a href="device_list.html"> 设备列表</a></li>
+										<li><a href="#">花蕾社区</a></li>
+										<li><a href="#">消息</a></li>
+										<li><a href="#">个人中心</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+							<div class="single-footer-caption mb-50">
+								<div class="footer-tittle mb-50">
+									<h4>联系我们</h4>
+									<p>加入我们、提供建议，为人间铸就出更多大善，大爱之人！</p>
+								</div>
+								<!-- Form -->
+								<div class="footer-form">
+									<div id="mc_embed_signup">
+										<form target="_blank"
+											action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+											method="get" class="subscribe_form relative mail_part" novalidate="true">
+											<input type="email" name="EMAIL" id="newsletter-form-email"
+												placeholder="  请输入你的邮箱">
+											<div class="form-icon">
+												<button type="submit" name="submit" id="newsletter-submit"
+													class="email_icon newsletter-submit button-contactForm">
+
+													提交
+												</button>
+											</div>
+											<div class="mt-10 info"></div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer-bottom area -->
+			<div class="footer-bottom-area">
+				<div class="container">
+					<div class="footer-border">
+						<div class="row d-flex align-items-center">
+							<div class="col-xl-12 ">
+								<div class="footer-copy-right text-center">
+									<p>版权 &copy;<script>
+											document.write(new Date().getFullYear());
+										</script> All rights reserved | Designed by 你说的队
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>
+		var act = {};
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				msg: 'nihao',
+				procontent: '没有查到',
+				protype: '普通消息',
+				prograde: '普通',
+			},
+			methods: {
+				click: function() {
+					this.$message({
+						message: '恭喜你，这是一条成功消息',
+						type: 'warning'
+					});
+				}
+			}
+		})
+
+		var proid = k.getParam('proid');
+		act.detail = function() {
+			var url = 'http://127.0.0.1:8080/bud/prompt/detail?proid=' + proid;
+			k.gest_rest(url, function(result) {
+				if (result.errcode == 200) {
+					app.procontent = result.data.procontent;
+					app.prototype = result.data.prototype;
+					app.prograde = result.data.prograde;
+				}
+			})
+		};
+
+		act.detail();
+	</script>
+
+</html>

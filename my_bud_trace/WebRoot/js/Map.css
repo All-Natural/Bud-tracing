@@ -1,0 +1,174 @@
+/* @import url("//unpkg.com/element-ui@2.15.4/lib/theme-chalk/index.css"); */
+#resultcolor{    
+    transition: 1.5s;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* body {
+    display: block;
+    position: relative;
+} */
+
+
+.vuebtn {
+    display: none;
+}
+
+#bigcontainer {
+    width: 1900px;
+    height: 0px;
+    margin: 0 0;
+    background-color: burlywood;
+}
+
+#leftcontainer{
+    width: 384px;
+    height: 748px;
+    float: left;
+}
+#container {
+    float: left;
+    width: 1500px;
+    height: 748px;
+    border-width: 3px;
+    border-style: groove;
+    margin-bottom: 15px;
+}
+
+#rightcontainer {
+    width: 192px;
+    height: 748px;
+    float: left;
+}
+
+#timeset {
+    width: 250px;
+    /* min-width: 24px; */
+    height: 200px;
+}
+
+
+.font {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.font1 {
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.font2 {
+    font-size: 20px;
+    width: 50%;
+    height: 10%;
+}
+
+.font2:hover {
+    color: cadetblue;
+}
+
+.font:hover {
+
+    color: cadetblue;
+}
+
+.font:focus {
+    color: cadetblue;
+}
+
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 3px 2px;
+    transition-duration: 0.6s;
+    /* cursor: pointer; */
+    width: 140px;
+    height: 70px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btnsd {
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.safebtn {
+    border: 2px solid #5FB878;
+    background-color: #5FB878;
+    color: white;
+    width: 100px;
+    height: 61.8px;
+}
+
+.safebtn:hover {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.dangerbtn {
+    border: 2px solid #EE5722;
+    background-color: #EE5722;
+    color: white;
+    width: 100px;
+    height: 61.8px;
+}
+
+.dangerbtn:hover {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+.timechoose{
+    background-color: #ff0000;
+}
